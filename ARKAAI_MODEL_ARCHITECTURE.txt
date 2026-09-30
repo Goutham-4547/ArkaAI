@@ -1,0 +1,40 @@
+ARKAAI MODEL ARCHITECTURE — SNAPDRAGON-FIRST
+============================================
+
+1. APPLICATION LAYER
+   app.py
+   - Chat, Sources, Studio, Notes
+   - student profile
+   - mistakes/strengths
+   - emotional adaptation
+   - persistent topics
+
+2. ADAPTIVE AI SOCKET
+   model_router.py
+   - stable interface: chat(), stream(), embed(), status()
+   - hardware detection
+   - performance-aware model choice
+   - model/runtime overrides
+
+3. SNAPDRAGON RUNTIME
+   GenieX on Windows ARM64 Snapdragon
+   - local OpenAI-compatible server at 127.0.0.1:18181
+   - Qualcomm NPU/GPU/CPU execution where supported
+   - quality + fast model slots
+
+4. GENERIC FALLBACK
+   Ollama for non-Snapdragon PCs or when explicitly needed.
+
+5. SEMANTIC MEMORY
+   semantic_embeddings.py
+   - local ONNX sentence embeddings
+   - independent of the chat LLM
+   - cosine similarity for memory/document retrieval
+
+6. SNAPDRAGON BRIDGE
+   snapdragon_backend.py
+   - QNN availability reporting
+   - target-runtime capability information
+
+The UI does not know which LLM family is active. This is the plug-in AI design:
+model/runtime choices can change without redesigning ArkaAI.

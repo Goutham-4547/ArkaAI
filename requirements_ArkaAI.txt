@@ -1,0 +1,17 @@
+PyPDF2>=3.0.1
+python-pptx>=1.0.2
+Pillow>=10.0.0
+pytesseract>=0.3.13
+numpy>=1.26
+onnxruntime>=1.20; not (platform_machine == "ARM64" and sys_platform == "win32")
+onnxruntime-qnn>=1.20; platform_machine == "ARM64" and sys_platform == "win32"
+huggingface_hub>=0.34.0
+transformers>=4.45.0
+tokenizers>=0.19.1
+gtts>=2.5.4
+SpeechRecognition>=3.10.4
+sounddevice>=0.5.2
+scipy>=1.14.1
+pyttsx3>=2.98
+imageio>=2.36.1
+imageio-ffmpeg>=0.5.1

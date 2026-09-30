@@ -1,0 +1,17 @@
+ARKAAI — SNAPDRAGON DEMO CHECKLIST
+
+Before submitting, run INSTALL_AND_RUN.bat on the Snapdragon-powered HP PC.
+
+Show the judge:
+1. Header status: Snapdragon device + QNN/NPU runtime state.
+2. Ask a normal question: fast model route and streaming response.
+3. Upload one PDF/PPT: semantic indexing message appears.
+4. Ask a question using different wording from the source: semantic retrieval should surface the relevant passage.
+5. Take a quiz: wrong answers enter weakness memory; correct answers enter strength memory.
+6. Type a stressed/confused sentence: mood badge changes and response becomes more supportive.
+7. Type 'profile': show persistent learning profile and routing.
+8. Open Studio: Summary / Study Guide / Mind Map / Report / Flashcards / Quiz.
+9. Run Video Overview: MP4 is rendered locally through imageio-ffmpeg.
+10. Restart ArkaAI and demonstrate that topic chats/profile/memory persist.
+
+Do not put passwords, API keys, private documents or confidential material into the submitted repository.

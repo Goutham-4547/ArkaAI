@@ -1,0 +1,18 @@
+MODEL / RUNTIME NOTES
+=====================
+
+Primary Snapdragon runtime:
+- Qualcomm GenieX (local runtime)
+- Default quality model: ai-hub-models/Qwen3-8B when the detected memory budget allows it.
+- Default fast model: ai-hub-models/Qwen3-4B.
+- Fallback: ai-hub-models/Qwen3-4B.
+
+Semantic retrieval:
+- sentence-transformers/all-MiniLM-L6-v2 (Apache-2.0 model; quantized ONNX asset).
+
+Emotion signal:
+- SamLowe/roberta-base-go_emotions-onnx. It is a probabilistic emotion signal,
+  not a medical diagnosis.
+
+ArkaAI does not claim ownership of third-party models or runtimes. Check the
+specific license/usage terms of any model that you plug in before redistribution.

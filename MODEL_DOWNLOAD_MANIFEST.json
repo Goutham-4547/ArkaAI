@@ -1,0 +1,28 @@
+{
+  "project": "ArkaAI",
+  "target": "Qualcomm Snapdragon-powered HP PCs",
+  "primary_runtime": "Qualcomm GenieX",
+  "runtime_version": "0.7.0",
+  "models": {
+    "quality": {
+      "preferred": "ai-hub-models/Qwen3-8B",
+      "fallback": "ai-hub-models/Qwen3-4B"
+    },
+    "fast": {
+      "preferred": "ai-hub-models/Qwen3-4B"
+    },
+    "vision": {
+      "preferred": "ai-hub-models/Qwen3-VL-8B-Instruct",
+      "fallback": "ai-hub-models/Qwen3-VL-4B-Instruct"
+    },
+    "semantic_memory": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "runtime": "local ONNX"
+    },
+    "emotion": {
+      "model": "SamLowe/roberta-base-go_emotions-onnx",
+      "runtime": "local ONNX when available; deterministic local fallback otherwise"
+    }
+  },
+  "distribution_note": "Third-party model weights and the Qualcomm runtime are fetched by the installer from their official distribution channels rather than copied into the competition source archive. This keeps licensing and provenance explicit and makes first-run reproducible."
+}
